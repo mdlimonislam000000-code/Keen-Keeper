@@ -1,4 +1,5 @@
 'use client'
+import toast from 'react-hot-toast';
 import { useContext } from 'react';
 import { CallContext } from '@/context/callcontext';
 import { useRouter } from "next/navigation";
@@ -6,9 +7,20 @@ import { MdCall } from 'react-icons/md';
 import { FaEnvelopeOpenText, FaVideo } from 'react-icons/fa';
 
 
+
 const ContactButton = ({ friend }) => {
     const { callData, setCallData } = useContext(CallContext);
     const router = useRouter();
+
+    const showToast = (type) => {
+        toast.success(`${type} with ${friend.name} successfully!`, {
+            style: {
+                borderRadius: '10px',
+                background: '#134e4a',
+                color: '#fff',
+            },
+        });
+    };
 
     const handelCallNow = (type, icon) => {
         if (friend) {
@@ -25,8 +37,7 @@ const ContactButton = ({ friend }) => {
             };
             setCallData((prevData) => [newEntry, ...prevData]);
 
-            console.log(friend)
-            alert(`${friend.name} You are calling`);
+            showToast(type);
         }
 
     }
