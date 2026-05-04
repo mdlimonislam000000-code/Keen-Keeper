@@ -24,7 +24,7 @@ const ContactButton = ({ friend }) => {
                 }),
             };
             setCallData((prevData) => [newEntry, ...prevData]);
-            
+
             console.log(friend)
             alert(`${friend.name} You are calling`);
         }
@@ -33,19 +33,19 @@ const ContactButton = ({ friend }) => {
 
 
     return (
-        <div className='mt-10 bg-amber-50 p-7 rounded'>
+        <div className='mt-4 mb-3 lg:mt-10 bg-amber-50 p-5 lg:p-7 rounded'>
             <p className='text-[1.2rem] font-bold'>Quick Check-In:</p>
 
-            <div className='flex justify-between '>
-                <div onClick={() => handelCallNow('Call', <MdCall />)} className='bg-white px-10 py-7 mt-5 rounded-2xl btn btn-ghost'>
+            <div className='lg:flex  justify-between '>
+                <div onClick={() => handelCallNow('Call', <MdCall />)} className='bg-white px-7 lg:px-10 py-5 lg:py-7 mt-5 rounded-2xl btn btn-ghost mr-11 lg:mr-0'>
                     <button className=''>Call</button>
                 </div>
 
-                <div onClick={() => handelCallNow('Text', <FaEnvelopeOpenText />)} className='bg-white px-10 py-7 mt-5 rounded-2xl btn btn-ghost'>
+                <div onClick={() => handelCallNow('Text', <FaEnvelopeOpenText />)} className='bg-white px-7 lg:px-10 py-5 lg:py-7 mt-5 rounded-2xl btn btn-ghost'>
                     <p>Text</p>
                 </div>
 
-                <div onClick={() => handelCallNow('Video', <FaVideo />)} className='bg-white px-10 py-7 mt-5 rounded-2xl btn btn-ghost'>
+                <div onClick={() => handelCallNow('Video', <FaVideo />)} className='bg-white px-7 lg:px-10 py-5 lg:py-7 mt-5 rounded-2xl btn btn-ghost'>
                     <p>Video</p>
                 </div>
             </div>

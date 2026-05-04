@@ -139,17 +139,17 @@ const FriendDetailPage = async ({ params }) => {
 
     return (
         <div className='max-w-3/4 mx-auto'>
-            <div className='  mx-auto mt-20 flex  gap-11 '>
-                <div className=' p-15  '>
+            <div className='  mx-auto mt-5 lg:mt-20 lg:flex gap-11 '>
+                <div className=' p-5 lg:p-15  '>
                     <div className='items-center '>
                         <Image
-                            className='rounded-full items-center ml-20'
+                            className='rounded-full items-center ml-15 lg:ml-20'
                             src={friend.picture}
                             alt='friend image'
                             width={100}
                             height={100}
                         ></Image>
-                        <p className='text-bold text-[3rem] text-center'>{friend.name}</p>
+                        <p className='text-bold text-[1.8rem] lg:text-[3rem] text-center'>{friend.name}</p>
 
                         <div className='flex gap-7 justify-between font-bold text-[1.2rem]'>
                             {
@@ -174,9 +174,9 @@ const FriendDetailPage = async ({ params }) => {
                     </div>
 
                     <div className='flex flex-col mt-3'>
-                        <button className="btn bg-black text-white border-black">Snooze 2 weeks</button>
+                        <button className="btn mb-2 bg-black text-white border-black">Snooze 2 weeks</button>
 
-                        <button className="btn bg-white text-black border-[#e5e5e5]">Archive</button>
+                        <button className="btn mb-2 bg-white text-black border-[#e5e5e5]">Archive</button>
 
                         <button className="btn bg-[#1A77F2] text-white border-[#005fd8]">Delete</button>
 
@@ -184,12 +184,12 @@ const FriendDetailPage = async ({ params }) => {
                 </div>
 
                 <div>
-                    <div className='flex gap-7 mt-10 '>
-                        <div className=' bg-amber-50  p-5 text-center rounded  '>
+                    <div className='lg:flex gap-3 lg:gap-7 mt-3 lg:mt-10 '>
+                        <div className=' bg-amber-50  p-5 text-center rounded mb-2 '>
                             <p className='text-[1.3rem] font-bold'>{friend.days_since_contact}</p>
                             <p className='text[1.1rem] font-medium'>Days Since Contact</p>
                         </div>
-                        <div className=' bg-amber-50  p-5 text-center rounded '>
+                        <div className=' mb-2 bg-amber-50  p-5 text-center rounded '>
                             <p className='text-[1.3rem] font-bold'>{friend.days_since_contact}</p>
                             <p className='text[1.1rem] font-medium'>{friend.goal}</p>
                         </div>
@@ -201,11 +201,11 @@ const FriendDetailPage = async ({ params }) => {
 
                     <div className='flex justify-between mt-5 bg-amber-50 p-7 rounded'>
                         <div className=''>
-                            <p className='text-[1.1rem] font-medium'>Relationship Goal</p>
-                            <p>Connect every <span className='font-bold text-[1.1rem]'>{friend.days_since_contact} Days</span></p>
+                            <p className=' text-[0.8rem] lg:text-[1.1rem] font-medium'>Relationship Goal</p>
+                            <p className=' text-[0.8rem] lg:text-[1rem]'>Connect every <span className='font-bold text-[0.8rem] lg:text-[1.1rem]'>{friend.days_since_contact} Days</span></p>
                         </div>
                         <div>
-                            <button className='btn btn-ghost'>Edit</button>
+                            <button className='btn btn-ghost bg-white'>Edit</button>
                         </div>
                     </div>
 
