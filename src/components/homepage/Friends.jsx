@@ -128,9 +128,9 @@ const Friends = () => {
     ]
 
     return (
-        <div className='container mx-auto mt-10'>
+        <div className='container mx-auto mt-1 lg:mt-10'>
 
-            <div >
+            <div className=' p-3'>
                 <h1 className='text-[1.5rem] mb-5 font-bold'>Your Friends:</h1>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 p-4'>
