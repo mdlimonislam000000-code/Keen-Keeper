@@ -1,3 +1,5 @@
+
+import ContactButton from '@/components/contacts/contactsButton';
 import Image from 'next/image';
 import React from 'react';
 
@@ -126,6 +128,15 @@ const friends = [
 const FriendDetailPage = async ({ params }) => {
     const { friendId } = await params;
     const friend = friends.find(friend => friend.id === parseInt(friendId))
+
+    if (!friend) {
+        return (
+            <div className='flex justify-center items-center h-screen'>
+                <h1 className='text-2xl font-bold'>Friend Not Found!</h1>
+            </div>
+        );
+    }
+
     return (
         <div className='max-w-3/4 mx-auto'>
             <div className='  mx-auto mt-20 flex  gap-11 '>
@@ -198,22 +209,8 @@ const FriendDetailPage = async ({ params }) => {
                         </div>
                     </div>
 
-                    <div className='mt-10 bg-amber-50 p-7 rounded'>
-                        <p className='text-[1.2rem] font-bold'>Quick Check-In:</p>
-                        <div className='flex justify-between '>
-                            <div className='bg-white px-10 py-7 mt-5 rounded-2xl btn btn-ghost'>
-                                <button className=''>Call</button>
-                            </div>
+                    <ContactButton friend={friend}></ContactButton>
 
-                            <div className='bg-white px-10 py-7 mt-5 rounded-2xl btn btn-ghost'>
-                                <p>Text</p>
-                            </div>
-
-                            <div className='bg-white px-10 py-7 mt-5 rounded-2xl btn btn-ghost'>
-                                <p>Video</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

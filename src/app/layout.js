@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navber/Navbar";
 import Footer from "@/components/footer/Footer";
+import { CallProvider } from "@/context/callcontext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,10 +27,33 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar></Navbar>
-        {children}
-        <Footer></Footer>
-        </body>
+        <CallProvider>
+          <Navbar></Navbar>
+          {children}
+          <Footer></Footer>
+        </CallProvider>
+      </body>
     </html>
   );
 }
+
+
+// import { CallProvider } from "@/context/callcontext"; 
+// import "./globals.css";
+
+// export const metadata = {
+//   title: "KeenKeeper",
+//   description: "Manage your friends effectively",
+// };
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en" data-theme="light">
+//       <body>
+//         <CallProvider>
+//           {children}
+//         </CallProvider>
+//       </body>
+//     </html>
+//   );
+// }
