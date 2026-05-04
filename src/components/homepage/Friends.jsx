@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
 import React from 'react';
 
 const Friends = () => {
@@ -127,49 +129,53 @@ const Friends = () => {
 
     return (
         <div className='container mx-auto'>
+
             <div >
                 <h1>Your Friends:</h1>
 
                 <div className='grid grid-cols-4 gap-5 p-4'>
                     {
                         friends.map(friend => (
-                            <div key={friend.id} className='border p-4 rounded shadow-2xs'>
+                            <Link href = {`/${friend.id}`} key={friend.id} >
+                                <div className='border p-4 rounded shadow-2xs'>
 
-                                <Image
-                                    className='mx-auto rounded-full'
-                                    src={friend.picture}
-                                    alt='Friends picture'
-                                    width={100}
-                                    height={100}
-                                ></Image>
-                                <p className='text-center text-[#1f2937] text-[1.3rem] mt-3'>{friend.name}</p>
-                                <p className='text-center text-[#64748b]'>{friend.days_since_contact}d ago</p>
+                                    <Image
+                                        className='mx-auto rounded-full'
+                                        src={friend.picture}
+                                        alt='Friends picture'
+                                        width={100}
+                                        height={100}
+                                    ></Image>
+                                    <p className='text-center text-[#1f2937] text-[1.3rem] mt-3'>{friend.name}</p>
+                                    <p className='text-center text-[#64748b]'>{friend.days_since_contact}d ago</p>
 
-                                <div className='flex justify-center gap-7'>
-                                    {
-                                        friend.tags.map((tag, index) => (
-                                            <span key={index}>
-                                                <p>{tag}</p>
-                                            </span>
-                                        ))
-                                    }
+                                    <div className='flex justify-center gap-7'>
+                                        {
+                                            friend.tags.map((tag, index) => (
+                                                <span key={index}>
+                                                    <p>{tag}</p>
+                                                </span>
+                                            ))
+                                        }
+                                    </div>
+
+                                    <p className={
+                                        friend.status === "Overdue"
+                                            ? "bg-red-500 text-amber-50 rounded text-center mt-2"
+                                            : friend.status === "Almost due"
+                                                ? "bg-yellow-500 text-amber-50 rounded  mt-2 text-center"
+                                                : "bg-green-500 text-amber-50 rounded text-center mt-2"
+                                    }>{friend.status}</p>
                                 </div>
-
-                                <p className={
-                                    friend.status === "Overdue"
-                                        ? "bg-red-500 text-amber-50 rounded text-center mt-2"
-                                        : friend.status === "Almost due"
-                                            ? "bg-yellow-500 text-amber-50 rounded  mt-2 text-center"
-                                            : "bg-green-500 text-amber-50 rounded text-center mt-2"
-                                }>{friend.status}</p>
-                            </div>
+                            </Link>
                         ))
                     }
                 </div>
             </div>
 
+
         </div>
     );
-};
+}; 
 
 export default Friends;
