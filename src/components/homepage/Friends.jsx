@@ -128,16 +128,16 @@ const Friends = () => {
     ]
 
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto mt-10'>
 
             <div >
-                <h1>Your Friends:</h1>
+                <h1 className='text-[1.5rem] mb-5 font-bold'>Your Friends:</h1>
 
-                <div className='grid grid-cols-4 gap-5 p-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 p-4'>
                     {
                         friends.map(friend => (
                             <Link href = {`/${friend.id}`} key={friend.id} >
-                                <div className='border p-4 rounded shadow-2xs'>
+                                <div className=' p-4 rounded shadow-md transition-shadow'>
 
                                     <Image
                                         className='mx-auto rounded-full'
