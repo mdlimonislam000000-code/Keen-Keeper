@@ -2,6 +2,7 @@
 import ContactButton from '@/components/contacts/contactsButton';
 import Image from 'next/image';
 import React from 'react';
+import NotFoundPage from '../not-found';
 
 const friends = [
     {
@@ -130,11 +131,7 @@ const FriendDetailPage = async ({ params }) => {
     const friend = friends.find(friend => friend.id === parseInt(friendId))
 
     if (!friend) {
-        return (
-            <div className='flex justify-center items-center h-screen'>
-                <h1 className='text-2xl font-bold'>Friend Not Found!</h1>
-            </div>
-        );
+        return <NotFoundPage />;
     }
 
     return (

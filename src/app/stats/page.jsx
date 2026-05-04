@@ -23,10 +23,10 @@ const page = () => {
 
     return (
         <div className='container mx-auto'>
-            <p className='text-center text-[#1f2937] text-[3rem]  mt-10 font-bold'>Friendship Analytics</p>
+            <p className='text-center text-[#1f2937] text-[2rem] lg:text-[3rem] mt-4  lg:mt-10 font-bold'>Friendship Analytics</p>
            
 
-            <div className=' shadow-md transition-shadow  rounded-4xl p-9 flex mx-auto flex-col my-10' style={{ width: '100%', maxWidth: '500px', aspectRatio: 1 }}>
+            <div className=' shadow-md transition-shadow  rounded-4xl p-4 lg:p-9 flex mx-auto flex-col my-4 lg:my-10' style={{ width: '100%', maxWidth: '500px', aspectRatio: 1 }}>
 
                 <div>
                     <p className='text-[1.2rem] font-bold text-[#244d3f] text-center mb-5'>By Interaction Type</p>
