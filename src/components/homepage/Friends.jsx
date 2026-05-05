@@ -140,7 +140,7 @@ const Friends = () => {
                                 <div className=' p-4 rounded shadow-md transition-shadow'>
 
                                     <Image
-                                        className=' object-cover rounded-full'
+                                        className=' mx-auto rounded-full'
                                         src={friend.picture}
                                         alt='Friends picture'
                                         width={100}
