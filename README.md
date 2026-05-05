@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📱 KeenKeeper - Friendship Tracker & Relationship Manager
 
-## Getting Started
+**KeenKeeper** হলো একটি আধুনিক এবং রেসপনসিভ ওয়েব অ্যাপ্লিকেশন, যা আপনাকে আপনার বন্ধুদের সাথে নিয়মিত যোগাযোগ বজায় রাখতে সাহায্য করে। এটি আপনার শেষ কথা বলার তারিখ ট্র্যাক করে এবং পরবর্তী যোগাযোগের সময় হলে আপনাকে মনে করিয়ে দেয়।
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+
+---
+
+## ✨ Features
+
+- **Personalized Dashboard:** 
+সকল বন্ধুদের একটি সুন্দর ৪-কলাম গ্রিড লেআউটে দেখা যায়। প্রতিটি কার্ডে বন্ধুর নাম, ছবি, ট্যাগ এবং বর্তমান স্ট্যাটাস প্রদর্শিত হয়।
+
+- **Friend Details & Metrics:** 
+প্রতিটি বন্ধুর জন্য আলাদা ডিটেইলস পেজ, যেখানে তাদের বায়ো, গোল এবং কুইক চেক-ইন অপশন রয়েছে।
+
+- **Interactive Timeline:**
+ কল, টেক্সট বা ভিডিও কলের ইতিহাস অটোমেটিক টাইমলাইনে সেভ হয়। এটি `Context API` ব্যবহার করে ডেটা ম্যানেজ করে।
+
+- **Dynamic Stats Page:** 
+Recharts ব্যবহার করে আপনার সব ইন্টারঅ্যাকশনের একটি ডাটা ভিজ্যুয়াল পাই-চার্ট দেখা যায়।
+
+- **Smart Filtering:**
+ টাইমলাইন পেজে ক্যাটাগরি (Call, Text, Video) অনুযায়ী ডেটা ফিল্টার করার সুবিধা।
+
+- **Responsive Design:**
+ মোবাইল, ট্যাবলেট এবং ডেস্কটপ—সব ধরনের স্ক্রিন সাইজে এটি নিখুঁতভাবে কাজ করে।
+
+- **Custom 404 & Loading:**
+ অ্যাপে কোনো ভুল ইউআরএল দিলে সুন্দর একটি ৪০৪ পেজ এবং ডেটা লোড হওয়ার সময় একটি 'Loading Ring' এনিমেশন দেখায়।
+
+---
+
+## 🛠️ Technologies Used
+
+- **Framework:** [Next.js] (App Router)
+
+- **Library:** [React.js]
+
+- **Styling:** [Tailwind CSS] & [daisyUI]
+
+- **Icons:** [React Icons]
+
+- **Notifications:** [React Hot Toast]
+
+- **Charts:** [Recharts]
+
+- **Font:** [Geist Font]
+
+---
+
+## 🔧 Installation & Local Setup
+
+১. রিপোজিটরি ক্লোন করুন:
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
