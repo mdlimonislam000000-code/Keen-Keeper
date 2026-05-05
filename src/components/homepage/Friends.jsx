@@ -140,11 +140,12 @@ const Friends = () => {
                                 <div className=' p-4 rounded shadow-md transition-shadow'>
 
                                     <Image
-                                        className='mx-auto rounded-full'
+                                        className=' object-cover rounded-full'
                                         src={friend.picture}
                                         alt='Friends picture'
                                         width={100}
                                         height={100}
+                                        
                                     ></Image>
                                     <p className='text-center text-[#1f2937] text-[1.3rem] mt-3'>{friend.name}</p>
                                     <p className='text-center text-[#64748b]'>{friend.days_since_contact}d ago</p>
